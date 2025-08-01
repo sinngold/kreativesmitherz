@@ -178,6 +178,38 @@ const Home = () => {
           </Link>
         </div>
       </section>
+
+      {/* Support Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-8">
+            Ich bedanke mich für die Unterstützung
+          </h2>
+          
+          {/* Signfex Logo Placeholder */}
+          <div className="mb-6">
+            <div className="w-48 h-24 mx-auto bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg flex items-center justify-center shadow-md">
+              <div className="text-center">
+                <p className="text-gray-600 font-semibold text-lg">SIGNFEX</p>
+                <p className="text-gray-500 text-sm">Logo</p>
+              </div>
+            </div>
+          </div>
+          
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Die Firma{' '}
+            <a 
+              href="https://www.signfex.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-purple-600 hover:text-purple-700 font-semibold underline decoration-purple-200 hover:decoration-purple-400 transition-colors duration-200"
+            >
+              Signfex
+            </a>
+            {' '}aus Augsburg unterstützt meine Arbeit. Vielen Dank!
+          </p>
+        </div>
+      </section>
     </div>
   );
 };
