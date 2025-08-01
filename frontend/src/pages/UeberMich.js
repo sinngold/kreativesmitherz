@@ -31,14 +31,15 @@ const UeberMich = () => {
           {/* Profile Image & Quick Info */}
           <div className="space-y-8">
             <div className="relative">
-              {/* Placeholder for profile image */}
-              <div className="w-full h-96 bg-gradient-to-br from-rose-200 via-purple-200 to-teal-200 rounded-2xl flex items-center justify-center shadow-xl">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-white/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Heart className="w-12 h-12 text-white" />
-                  </div>
-                  <p className="text-white font-medium">Profil Foto</p>
-                  <p className="text-white/80 text-sm">maria-portrait.jpg</p>
+              {/* Profile Image */}
+              <div className="w-full h-96 rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1673103622378-62e9a29f71f2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxwb3R0ZXIlMjB3b21hbiUyMHN0dWRpb3xlbnwwfHx8fDE3NTQwNzM0OTV8MA&ixlib=rb-4.1.0&q=85"
+                  alt="Maria Schneider - Handwerkskünstlerin in ihrem Atelier"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                  <p className="text-gray-700 font-medium text-sm">maria-atelier-portrait.jpg</p>
                 </div>
               </div>
               
