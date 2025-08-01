@@ -186,14 +186,13 @@ const Home = () => {
             Ich bedanke mich für die Unterstützung
           </h2>
           
-          {/* Signfex Logo Placeholder */}
+          {/* Signfex Logo */}
           <div className="mb-6">
-            <div className="w-48 h-24 mx-auto bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg flex items-center justify-center shadow-md">
-              <div className="text-center">
-                <p className="text-gray-600 font-semibold text-lg">SIGNFEX</p>
-                <p className="text-gray-500 text-sm">Logo</p>
-              </div>
-            </div>
+            <img 
+              src="https://customer-assets.emergentagent.com/job_handwerk-ideen/artifacts/u6396zt8_logo-signfex.png"
+              alt="Signfex Logo"
+              className="w-48 h-24 mx-auto object-contain bg-white rounded-lg shadow-md p-4"
+            />
           </div>
           
           <p className="text-lg text-gray-700 leading-relaxed">
