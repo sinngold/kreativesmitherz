@@ -91,7 +91,7 @@ const Layout = ({ children }) => {
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
                 <Palette className="w-6 h-6 text-rose-400" />
-                <span className="text-xl font-bold text-gray-700">Kreative Welten</span>
+                <span className="text-xl font-bold text-gray-700">Kreativ mit Herz</span>
               </div>
               <p className="text-gray-600 leading-relaxed">
                 Entdecke die Magie des Handwerks und lass deiner Kreativität freien Lauf. 
