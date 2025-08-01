@@ -1,34 +1,217 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Import lokaler Schriftarten */
+@font-face {
+  font-family: 'LocalSans';
+  src: url('./assets/fonts/LocalSans-Regular.woff2') format('woff2'),
+       url('./assets/fonts/LocalSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+@font-face {
+  font-family: 'LocalSans';
+  src: url('./assets/fonts/LocalSans-Medium.woff2') format('woff2'),
+       url('./assets/fonts/LocalSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-display: swap;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+@font-face {
+  font-family: 'LocalSans';
+  src: url('./assets/fonts/LocalSans-Bold.woff2') format('woff2'),
+       url('./assets/fonts/LocalSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
 }
 
-.App-link {
-    color: #61dafb;
+@font-face {
+  font-family: 'LocalSerif';
+  src: url('./assets/fonts/LocalSerif-Regular.woff2') format('woff2'),
+       url('./assets/fonts/LocalSerif-Regular.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* CSS Reset und Basis-Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'LocalSans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: #374151;
+  background: linear-gradient(135deg, #fdf2f8 0%, #f5f3ff 50%, #f0fdfa 100%);
+  min-height: 100vh;
+}
+
+/* Headline Schriftarten */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'LocalSerif', Georgia, serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #f472b6, #a855f7);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #ec4899, #9333ea);
+}
+
+/* Hover Effekte für Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, #f472b6, #a855f7);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(244, 114, 182, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(244, 114, 182, 0.4);
+  background: linear-gradient(135deg, #ec4899, #9333ea);
+}
+
+/* Text Selection */
+::selection {
+  background: linear-gradient(135deg, #fce7f3, #e9d5ff);
+  color: #7c3aed;
+}
+
+/* Focus States */
+button:focus,
+a:focus {
+  outline: 2px solid #a855f7;
+  outline-offset: 2px;
+}
+
+/* Glassmorphism Effekte */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Smooth Transitions für alle interaktiven Elemente */
+a, button, input, textarea {
+  transition: all 0.3s ease;
+}
+
+/* Responsive Bilder */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Custom Utilities */
+.text-gradient {
+  background: linear-gradient(135deg, #f472b6, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-creative {
+  background: linear-gradient(135deg, #fdf2f8 0%, #f5f3ff 25%, #f0fdfa 50%, #ecfdf5 75%, #fef7ed 100%);
+}
+
+/* Mobile optimierte Breakpoints */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  * {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

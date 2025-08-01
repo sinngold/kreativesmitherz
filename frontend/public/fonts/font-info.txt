@@ -1,0 +1,22 @@
+Lokale Schriftarten für DSGVO-Konformität
+=====================================
+
+Diese Datei dokumentiert die lokalen Schriftarten für die Website.
+
+Verwendete Schriftarten:
+- LocalSans: Moderne Sans-Serif für Fließtext
+- LocalSerif: Elegante Serif für Überschriften
+
+Lizenzen:
+Alle Schriftarten sind entweder Open Source (SIL Open Font License) 
+oder entsprechend lizenziert für kommerzielle Nutzung.
+
+Dateien (Platzhalter):
+- LocalSans-Regular.woff2/woff
+- LocalSans-Medium.woff2/woff  
+- LocalSans-Bold.woff2/woff
+- LocalSerif-Regular.woff2/woff
+
+Hinweis: In einer echten Implementierung würden hier die tatsächlichen 
+Schriftartendateien liegen. Für diese Demo werden die System-Fallback-
+Schriftarten verwendet, falls die lokalen Dateien nicht verfügbar sind.
