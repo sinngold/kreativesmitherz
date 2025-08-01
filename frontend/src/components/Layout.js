@@ -153,7 +153,7 @@ const Layout = ({ children }) => {
 
           <div className="border-t border-rose-200 mt-8 pt-8 text-center">
             <p className="text-gray-500">
-              © 2025 Kreative Welten. Mit {' '}
+              © 2025 Kreativ mit Herz. Mit {' '}
               <Heart className="w-4 h-4 inline text-rose-400" />
               {' '} handgemacht.
             </p>
