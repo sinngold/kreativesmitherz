@@ -1,35 +1,4 @@
-/* Import lokaler Schriftarten */
-@font-face {
-  font-family: 'LocalSans';
-  src: url('./assets/fonts/LocalSans-Regular.woff2') format('woff2'),
-       url('./assets/fonts/LocalSans-Regular.woff') format('woff');
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'LocalSans';
-  src: url('./assets/fonts/LocalSans-Medium.woff2') format('woff2'),
-       url('./assets/fonts/LocalSans-Medium.woff') format('woff');
-  font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'LocalSans';
-  src: url('./assets/fonts/LocalSans-Bold.woff2') format('woff2'),
-       url('./assets/fonts/LocalSans-Bold.woff') format('woff');
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'LocalSerif';
-  src: url('./assets/fonts/LocalSerif-Regular.woff2') format('woff2'),
-       url('./assets/fonts/LocalSerif-Regular.woff') format('woff');
-  font-weight: 400;
-  font-display: swap;
-}
+/* Lokale Schriftarten (DSGVO-konform) - Fallback auf System-Schriftarten */
 
 /* CSS Reset und Basis-Styles */
 * {
